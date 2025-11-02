@@ -1,0 +1,119 @@
+/* Hero component styles */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #E8F1FD 0%, #ffffff 50%, #f8fbff 100%);
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  border-radius: 50%;
+  opacity: 0.06;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, 50px) rotate(180deg); }
+}
+
+.hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: white;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  color: var(--text-gray);
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.hero-buttons .btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-blue);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .hero-title { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding-top: 100px; }
+  .hero-content { padding: 3rem 1.5rem; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-description { font-size: 1.1rem; }
+}

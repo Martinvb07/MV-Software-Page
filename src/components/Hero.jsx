@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../styles/Hero.css'
 
 const Hero = ({ onNavigate, stats }) => {
   return (
@@ -14,7 +15,7 @@ const Hero = ({ onNavigate, stats }) => {
           ) : (
             <Link className="btn btn-primary" to="/productos">Ver Proyectos</Link>
           )}
-          <button className="btn btn-secondary" onClick={() => alert('Solicitar Cotización')}>Solicitar Cotización</button>
+          <Link className="btn btn-secondary" to="/contacto">Solicitar Cotización</Link>
         </div>
         <div className="hero-stats">
           {stats.map((stat, index) => (

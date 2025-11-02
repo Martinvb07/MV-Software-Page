@@ -1,5 +1,6 @@
 import React from 'react'
 import { Calendar, Shield, Cloud, TrendingUp, Target, Eye, Gem, Rocket } from 'lucide-react'
+import '../styles/About.css'
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
             <div className="about-highlights">
               <div className="highlight-box">
                 <Calendar size={32} style={{ margin: '0 auto 0.5rem', color: 'var(--primary-blue)' }} />
-                <span className="highlight-number">2020</span>
+                <span className="highlight-number">2024</span>
                 <span className="highlight-text">Fundación</span>
               </div>
               <div className="highlight-box">

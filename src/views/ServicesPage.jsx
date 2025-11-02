@@ -10,9 +10,7 @@ const ServicesPage = ({ scrolled }) => {
     <div className="app">
       <Header scrolled={scrolled} activeSection="servicios" />
       <main>
-        <div className="section">
-          <Services services={services} />
-        </div>
+        <Services services={services} />
       </main>
       <CTA />
       <Footer />

@@ -1,7 +1,7 @@
 // Data models (pure data, no UI)
 export const stats = [
-  { number: '5+', label: 'Años de Experiencia' },
-  { number: '50+', label: 'Proyectos Completados' },
+  { number: '1+', label: 'Años de Experiencia' },
+  { number: '10+', label: 'Proyectos Completados' },
   { number: '100%', label: 'Satisfacción' }
 ]
 
@@ -35,13 +35,6 @@ export const services = [
     tags: ['Estrategia', 'Innovación', 'Optimización']
   },
   {
-    id: 'apps',
-    icon: 'Smartphone',
-    title: 'Aplicaciones Móviles',
-    description: 'Desarrollamos apps nativas y multiplataforma para iOS y Android con la mejor performance',
-    tags: ['iOS', 'Android', 'React Native']
-  },
-  {
     id: 'seguridad',
     icon: 'Shield',
     title: 'Seguridad y Mantenimiento',
@@ -67,5 +60,22 @@ export const products = [
     ],
     priceBasic: '60.000',
     pricePro: '100.000'
+  },
+  {
+    id: 'tiendasoft',
+    name: 'TiendaSoft',
+    tagline: 'Sistema de Punto de Venta para Retail',
+    badge: 'SaaS',
+    description: 'POS en la nube para tiendas y minimercados. Controla ventas, inventario y clientes en tiempo real.',
+    features: [
+      { icon: 'CreditCard', text: 'Ventas con múltiples medios de pago' },
+      { icon: 'Package', text: 'Inventario con alertas de stock' },
+      { icon: 'Users', text: 'Gestión de clientes y fidelización' },
+      { icon: 'QrCode', text: 'Códigos de barras y QR' },
+      { icon: 'BarChart3', text: 'Reportes de ventas y márgenes' },
+      { icon: 'Cloud', text: 'Operación 100% en la nube' }
+    ],
+    priceBasic: '40.000',
+    pricePro: '80.000'
   }
 ]

@@ -1,7 +1,10 @@
 import React from 'react'
 import * as Icons from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import '../../styles/Products/Products.css'
 
 const Products = ({ products }) => {
+  const navigate = useNavigate()
   return (
     <section className="section light">
       <div className="section-container">
@@ -37,7 +40,19 @@ const Products = ({ products }) => {
                     <span className="price-period"> COP/mes</span>
                   </div>
                 </div>
-                <button className="btn btn-primary" style={{ width: '100%' }} onClick={() => alert(`Conocer más sobre ${product.name}`)}>Conocer Más</button>
+                <button
+                  className="btn btn-primary"
+                  style={{ width: '100%' }}
+                  onClick={() => {
+                    if (product.id === 'mesoft') {
+                      navigate('/productos/mesoft')
+                    } else {
+                      alert(`Conocer más sobre ${product.name}`)
+                    }
+                  }}
+                >
+                  Conocer Más
+                </button>
               </div>
             </div>
           ))}

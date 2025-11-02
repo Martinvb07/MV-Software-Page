@@ -1,0 +1,806 @@
+/* ==================== MODAL OVERLAY ==================== */
+.mesoft-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mesoft-modal {
+  background: white;
+  width: 95%;
+  max-width: 1400px;
+  height: 95vh;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mesoft-close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.mesoft-close-btn:hover {
+  background: #f0f0f0;
+  transform: rotate(90deg);
+}
+
+/* ==================== HEADER ==================== */
+.mesoft-header {
+  background: #3d4f5e;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mesoft-logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.mesoft-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.mesoft-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.mesoft-nav a:hover {
+  opacity: 0.8;
+}
+
+/* ==================== CONTENIDO SCROLLEABLE ==================== */
+.mesoft-content {
+  height: calc(95vh - 70px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.mesoft-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mesoft-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mesoft-content::-webkit-scrollbar-thumb {
+  background: #1E66D6;
+  border-radius: 4px;
+}
+
+/* ==================== CAROUSEL/GALERÍA ==================== */
+.mesoft-gallery {
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+  z-index: 1;
+}
+
+.slide-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slide-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.slide-caption h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.carousel-btn:hover {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn.prev {
+  left: 2rem;
+}
+
+.carousel-btn.next {
+  right: 2rem;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicator.active {
+  background: white;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* ==================== SECCIONES ==================== */
+.mesoft-hero {
+  padding: 5rem 3rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mesoft-hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.mesoft-hero p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== BOTONES ==================== */
+/* Use global .btn styles for consistent blue buttons */
+
+/* ==================== RESUMEN ==================== */
+.mesoft-summary {
+  padding: 4rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mesoft-summary h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.mesoft-summary p {
+  color: #666;
+  max-width: 800px;
+  margin: 0.5rem auto 2rem;
+}
+
+.summary-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.summary-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #E8F1FD;
+  color: #1E66D6;
+  margin: 0 auto 0.75rem;
+}
+
+.summary-card h3 {
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.summary-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.summary-pricing {
+  margin: 2rem 0;
+}
+
+.summary-pricing .from {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.summary-pricing .amount {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.summary-pricing .currency {
+  color: #1E66D6;
+  font-weight: 800;
+}
+
+.summary-pricing .value {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.summary-pricing .period {
+  color: #666;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== CARACTERÍSTICAS ==================== */
+.mesoft-features {
+  padding: 4rem 3rem;
+  background: #f8f9fa;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+}
+
+.feature-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.feature-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==================== QUIÉNES SOMOS ==================== */
+.mesoft-about {
+  padding: 5rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.valores-grid h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.valores-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.valor-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.valor-card:hover {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.valor-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #ff6b35;
+}
+
+.valor-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.valor-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================== EQUIPO ==================== */
+.mesoft-team {
+  padding: 5rem 3rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.mesoft-team h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+}
+
+.team-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.team-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.team-card p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* ==================== ESPECIALIDADES ==================== */
+.mesoft-specialties {
+  padding: 5rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mesoft-specialties h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.specialty-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.specialty-card:hover {
+  border-color: #ff6b35;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.1);
+}
+
+.specialty-icon {
+  width: 60px;
+  height: 60px;
+  background: #fff5f2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #ff6b35;
+}
+
+.specialty-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.specialty-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specialty-card li {
+  padding: 0.75rem 0;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.specialty-card li:last-child {
+  border-bottom: none;
+}
+
+.specialty-card li::before {
+  content: "•";
+  color: #ff6b35;
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
+/* ==================== PRECIOS ==================== */
+.mesoft-pricing {
+  padding: 5rem 3rem;
+  background: #f8f9fa;
+}
+
+.mesoft-pricing h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  border-color: #1E66D6;
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(30, 102, 214, 0.15);
+}
+
+.pricing-card.recommended {
+  border-color: #1E66D6;
+  box-shadow: 0 20px 50px rgba(30, 102, 214, 0.2);
+}
+
+.badge-recommended {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #1E66D6 0%, #154BA0 100%);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  margin-bottom: 2rem;
+}
+
+.price .currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1E66D6;
+}
+
+.price .amount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.price .period {
+  font-size: 1rem;
+  color: #666;
+}
+
+.plan-description {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.features-list {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list svg {
+  color: #1E66D6;
+  flex-shrink: 0;
+}
+
+.pricing-card button {
+  width: 100%;
+}
+
+/* ==================== CTA ==================== */
+.mesoft-cta {
+  padding: 6rem 3rem;
+  background: linear-gradient(135deg, #1E66D6 0%, #154BA0 100%);
+  text-align: center;
+  color: white;
+}
+
+.mesoft-cta h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.mesoft-cta p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .mesoft-about {
+    grid-template-columns: 1fr;
+  }
+  
+  .valores-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mesoft-close-btn {
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+  .mesoft-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .mesoft-nav {
+    display: none;
+  }
+  
+  .carousel {
+    height: 350px;
+  }
+  
+  .slide-caption h2 {
+    font-size: 1.8rem;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mesoft-cta h2 {
+    font-size: 2rem;
+  }
+}

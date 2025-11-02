@@ -1,20 +1,18 @@
 import React from 'react'
 import Header from '../components/Header.jsx'
-import About from '../components/About.jsx'
 import CTA from '../components/CTA.jsx'
 import Footer from '../components/Footer.jsx'
 
-const AboutPage = ({ scrolled }) => {
+const ContactPage = ({ scrolled }) => {
   return (
     <div className="app">
-      <Header scrolled={scrolled} activeSection="nosotros" />
+      <Header scrolled={scrolled} activeSection="contacto" />
       <main>
-        <About />
+        <CTA />
       </main>
-      <CTA />
       <Footer />
     </div>
   )
 }
 
-export default AboutPage
+export default ContactPage

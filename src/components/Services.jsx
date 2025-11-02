@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Icons from 'lucide-react'
+import '../styles/Services.css'
 
 const Services = ({ services }) => {
   return (
