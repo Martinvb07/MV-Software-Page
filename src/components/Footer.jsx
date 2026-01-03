@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-brand">
           <Link className="logo" to="/">
-            <span className="logo-text">MV</span>
-            <span className="logo-subtitle">SOFTWARE</span>
+            <span className="logo-text">VELCORE</span>
+            <span className="logo-subtitle">SYSTEMS</span>
           </Link>
           <p className="footer-description">Desarrollamos soluciones tecnológicas innovadoras para empresas que buscan crecer y optimizar sus procesos. Transformamos ideas en software profesional.</p>
         </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           <Link to="/blog">Blog</Link>
         </div>
       </div>
-      <div className="footer-bottom"><p>© 2025 MV Software - Desarrollado por Martin Velásquez | Colombia</p></div>
+      <div className="footer-bottom"><p>© 2025 Velcore Systems - Desarrollado por Martin Velásquez | Colombia</p></div>
     </footer>
   )
 }

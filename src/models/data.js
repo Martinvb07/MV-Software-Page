@@ -62,20 +62,37 @@ export const products = [
     pricePro: '100.000'
   },
   {
-    id: 'tiendasoft',
-    name: 'TiendaSoft',
-    tagline: 'Sistema de Punto de Venta para Retail',
+    id: 'agromanager',
+    name: 'AgroManager',
+    tagline: 'Gestión integral para fincas y cultivos',
     badge: 'SaaS',
-    description: 'POS en la nube para tiendas y minimercados. Controla ventas, inventario y clientes en tiempo real.',
+    description: 'Plataforma en la nube para administrar lotes, siembras, cosechas y costos de producción agrícola en un solo lugar.',
     features: [
-      { icon: 'CreditCard', text: 'Ventas con múltiples medios de pago' },
-      { icon: 'Package', text: 'Inventario con alertas de stock' },
-      { icon: 'Users', text: 'Gestión de clientes y fidelización' },
-      { icon: 'QrCode', text: 'Códigos de barras y QR' },
-      { icon: 'BarChart3', text: 'Reportes de ventas y márgenes' },
-      { icon: 'Cloud', text: 'Operación 100% en la nube' }
+      { icon: 'Sprout', text: 'Control de lotes, cultivos y etapas de siembra' },
+      { icon: 'CalendarRange', text: 'Planificación de labores y calendario de actividades' },
+      { icon: 'ClipboardList', text: 'Registro de insumos, mano de obra y costos' },
+      { icon: 'BarChart3', text: 'Reportes de rendimientos por cultivo y temporada' },
+      { icon: 'Users', text: 'Gestión de personal y contratistas' },
+      { icon: 'Cloud', text: 'Acceso desde cualquier dispositivo con conexión' }
     ],
-    priceBasic: '40.000',
-    pricePro: '80.000'
+    priceBasic: '70.000',
+    pricePro: '120.000'
+  },
+  {
+    id: 'enviago',
+    name: 'EnviaGO',
+    tagline: 'Gestión de entregas y logística de última milla',
+    badge: 'SaaS',
+    description: 'Sistema para coordinar envíos, rutas y mensajeros en tiempo real, ideal para tiendas en línea y servicios de delivery.',
+    features: [
+      { icon: 'MapPin', text: 'Seguimiento de envíos en mapa en tiempo real' },
+      { icon: 'Route', text: 'Optimización de rutas para repartidores' },
+      { icon: 'Smartphone', text: 'Notificaciones al cliente por SMS o WhatsApp (según integración)' },
+      { icon: 'Package', text: 'Control de estados de pedido y paquetes' },
+      { icon: 'CreditCard', text: 'Registro de cobros contra entrega (COD)' },
+      { icon: 'BarChart3', text: 'Indicadores de tiempos de entrega y desempeño' }
+    ],
+    priceBasic: '60.000',
+    pricePro: '110.000'
   }
 ]

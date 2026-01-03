@@ -1,13 +1,13 @@
-# 💻 MV Software
+# 💻 Velcore Systems
 
-**MV Software** es una landing page moderna e informativa desarrollada en **React (JSX)** bajo el patrón de arquitectura **MVC (Modelo - Vista - Controlador)**.  
-Su propósito es representar de manera profesional la identidad de **MV Software**, una empresa dedicada al desarrollo de soluciones tecnológicas personalizadas.
+**Velcore Systems** es una landing page moderna e informativa desarrollada en **React (JSX)** bajo el patrón de arquitectura **MVC (Modelo - Vista - Controlador)**.  
+Su propósito es representar de manera profesional la identidad de **Velcore Systems**, una empresa dedicada al desarrollo de soluciones tecnológicas personalizadas.
 
 ---
 
 ## 🌐 Descripción General
 
-MV Software es una empresa colombiana especializada en el **desarrollo de software a medida**, enfocada en crear sistemas que transforman ideas en soluciones tecnológicas reales para negocios, emprendimientos y organizaciones.
+Velcore Systems es una empresa colombiana especializada en el **desarrollo de software a medida**, enfocada en crear sistemas que transforman ideas en soluciones tecnológicas reales para negocios, emprendimientos y organizaciones.
 
 Esta página fue creada como una **presentación corporativa digital**, mostrando los servicios, productos y valores principales de la marca.
 
@@ -15,7 +15,7 @@ Esta página fue creada como una **presentación corporativa digital**, mostrand
 
 ## 🎯 Objetivo del Proyecto
 
-El objetivo de esta landing page es brindar una **imagen profesional y moderna** de MV Software, destacando sus servicios, productos y filosofía empresarial.  
+El objetivo de esta landing page es brindar una **imagen profesional y moderna** de Velcore Systems, destacando sus servicios, productos y filosofía empresarial.  
 Está pensada para captar potenciales clientes, mostrar el portafolio de soluciones SaaS y reforzar la identidad visual de la marca.
 
 ---
@@ -34,7 +34,7 @@ El proyecto está organizado bajo el modelo **MVC**, donde:
 
 ### 🏠 Inicio
 
-Presenta el eslogan de la marca y una introducción visual al propósito de MV Software:
+Presenta el eslogan de la marca y una introducción visual al propósito de Velcore Systems:
 
 > _“Transformamos ideas en software profesional.”_
 
@@ -88,6 +88,6 @@ Los íconos de **Lucide React** complementan la estética limpia y tecnológica 
 ## 🧑‍💻 Autor
 
 **Desarrollado por:**  
-**Martin Velásquez** — _MV Software_  
+**Martin Velásquez** — _Velcore Systems_  
 📍 Colombia  
 © 2025 Todos los derechos reservados.

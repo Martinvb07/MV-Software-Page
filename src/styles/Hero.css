@@ -1,7 +1,8 @@
 /* Hero component styles */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #E8F1FD 0%, #ffffff 50%, #f8fbff 100%);
+  background: radial-gradient(circle at top, rgba(43, 184, 255, 0.25) 0%, transparent 55%),
+              linear-gradient(135deg, var(--navy-blue) 0%, #031433 50%, var(--navy-blue) 100%);
   padding-top: 120px;
   display: flex;
   align-items: center;
@@ -53,7 +54,7 @@
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: var(--text-dark);
+  color: #ffffff;
 }
 
 .highlight {
@@ -65,7 +66,7 @@
 
 .hero-description {
   font-size: 1.3rem;
-  color: var(--text-gray);
+  color: rgba(230, 238, 255, 0.9);
   max-width: 750px;
   margin: 0 auto 3rem;
   line-height: 1.8;
@@ -96,13 +97,13 @@
 .stat-number {
   font-size: 3rem;
   font-weight: 900;
-  color: var(--primary-blue);
+  color: #ffffff;
   display: block;
 }
 
 .stat-label {
   font-size: 0.95rem;
-  color: var(--text-gray);
+  color: rgba(220, 230, 255, 0.8);
   margin-top: 0.5rem;
   font-weight: 500;
 }

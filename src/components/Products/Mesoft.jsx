@@ -75,35 +75,36 @@ const MesoftDetail = ({ isOpen, onClose }) => {
 
         const planes = [
             {
-                name: 'Plan Básico',
+                name: 'Plan Básico Mensual',
                 price: '60.000',
+                period: 'COP/mes',
                 description:
-                    'Acceso completo al sistema Mesoft con todas las funcionalidades disponibles (pedidos, inventario, reportes, usuarios). Incluye soporte estándar y mantenimiento mensual.',
+                    'Suscripción mensual a Mesoft con todas las funcionalidades del sistema (pedidos, inventario, reportes, usuarios). Ideal si prefieres empezar con un pago mensual bajo e ir creciendo.',
                 features: [
-                    'Acceso completo al sistema',
+                    'Pago mensual por suscripción',
+                    'Acceso completo mientras la suscripción esté activa',
                     'Gestión de pedidos ilimitados',
-                    'Control de inventario',
-                    'Reportes y estadísticas',
-                    'Gestión de usuarios',
-                    'Soporte estándar',
-                    'Mantenimiento mensual',
-                    'Actualizaciones automáticas'
+                    'Control de inventario y productos',
+                    'Reportes y estadísticas básicas',
+                    'Gestión de usuarios y roles',
+                    'Soporte estándar incluido',
+                    'Actualizaciones automáticas mientras la suscripción esté activa'
                 ]
             },
             {
-                name: 'Plan Profesional',
-                price: '100.000',
+                name: 'Licencia Única',
+                price: '720.000',
+                period: '  Pago único',
                 description:
-                    'Acceso completo al sistema Mesoft con las mismas funcionalidades que el plan básico, pero con soporte prioritario y atención personalizada. Ideal para clientes que desean una relación directa de soporte y actualizaciones.',
+                    'Compra única de la licencia de Mesoft para tu restaurante. Pagas una sola vez y usas el sistema sin mensualidades, con 1 año de soporte y actualizaciones incluidas.',
                 features: [
-                    'Todo lo del Plan Básico',
-                    'Soporte prioritario 24/7',
-                    'Atención personalizada',
-                    'Actualizaciones anticipadas',
-                    'Asesoría directa',
-                    'Capacitación incluida',
-                    'Respuesta < 2 horas',
-                    'Personalización de reportes'
+                    'Pago único por licencia (sin mensualidades)',
+                    'Uso ilimitado del sistema para tu negocio',
+                    'Todas las funcionalidades del sistema Mesoft',
+                    '1 año de soporte y mantenimiento incluido',
+                    'Actualizaciones durante el primer año sin costo',
+                    'Posibilidad de renovar soporte desde el segundo año',
+                    'Ideal para negocios que prefieren inversión única y estabilidad en costos'
                 ],
                 recommended: true
             }
@@ -196,7 +197,7 @@ const MesoftDetail = ({ isOpen, onClose }) => {
                                             <div className="summary-actions">
                                                 <a
                                                     className="btn btn-primary"
-                                                    href="https://srv1037585.hstgr.cloud/"
+                                                    href="https://mesoft.store/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
@@ -222,7 +223,7 @@ const MesoftDetail = ({ isOpen, onClose }) => {
                                                         <div className="price">
                                                             <span className="currency">$</span>
                                                             <span className="amount">{plan.price}</span>
-                                                            <span className="period">COP/mes</span>
+                                                            <span className="period">{plan.period}</span>
                                                         </div>
                                                         <p className="plan-description">{plan.description}</p>
                                                         <ul className="features-list">

@@ -1,6 +1,6 @@
 /* Footer component styles */
 .footer {
-  background: #0a1628;
+  background: var(--navy-blue);
   color: white;
   padding: 4rem 2.5rem 2rem;
 }

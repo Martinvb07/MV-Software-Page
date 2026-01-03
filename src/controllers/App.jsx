@@ -8,6 +8,8 @@ import ContactPage from '../views/ContactPage.jsx'
 import BlogPage from '../views/BlogPage.jsx'
 import PortafolioPage from '../views/PortafolioPage.jsx'
 import MesoftDetail from '../components/Products/Mesoft.jsx'
+import AgroManagerDetail from '../components/Products/AgroManager.jsx'
+import EnviaGODetail from '../components/Products/EnviaGO.jsx'
 import { stats, services, products } from '../models/data.js'
 
 // Controller: handles state, scroll and navigation logic and passes data/handlers to the view
@@ -73,6 +75,8 @@ const App = () => {
       <Route path="/servicios" element={<ServicesPage scrolled={scrolled} />} />
   <Route path="/productos" element={<ProductsPage scrolled={scrolled} />} />
   <Route path="/productos/mesoft" element={<MesoftRoute />} />
+  <Route path="/productos/agromanager" element={<AgroManagerRoute />} />
+  <Route path="/productos/enviago" element={<EnviaGORoute />} />
       <Route path="/nosotros" element={<AboutPage scrolled={scrolled} />} />
       <Route path="/contacto" element={<ContactPage scrolled={scrolled} />} />
       <Route path="/portafolio" element={<PortafolioPage scrolled={scrolled} />} />
@@ -92,6 +96,30 @@ function MesoftRoute() {
       isOpen={true}
       onClose={() => {
         // Return to products page when closing the modal
+        navigate('/productos')
+      }}
+    />
+  )
+}
+
+function AgroManagerRoute() {
+  const navigate = useNavigate()
+  return (
+    <AgroManagerDetail
+      isOpen={true}
+      onClose={() => {
+        navigate('/productos')
+      }}
+    />
+  )
+}
+
+function EnviaGORoute() {
+  const navigate = useNavigate()
+  return (
+    <EnviaGODetail
+      isOpen={true}
+      onClose={() => {
         navigate('/productos')
       }}
     />

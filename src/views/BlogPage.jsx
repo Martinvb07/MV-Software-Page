@@ -62,7 +62,7 @@ const BlogPage = ({ scrolled }) => {
           <div className="section-container">
             <div className="section-header">
               <h2 className="section-title">Opiniones</h2>
-              <p className="section-subtitle">Cuéntanos tu experiencia con MV Software y nuestros productos. ¡Tu feedback nos ayuda a mejorar!</p>
+              <p className="section-subtitle">Cuéntanos tu experiencia con Velcore Systems y nuestros productos. ¡Tu feedback nos ayuda a mejorar!</p>
             </div>
 
             <div className="products-grid">
@@ -98,7 +98,7 @@ const BlogPage = ({ scrolled }) => {
                               aria-label={`Calificar ${n} estrellas`}
                               style={{background:'transparent', border:'none', cursor:'pointer'}}
                             >
-                              <Star size={28} color={filled ? '#1E66D6' : '#bbb'} fill={filled ? '#1E66D6' : 'none'} />
+                              <Star size={28} color={filled ? '#2BB8FF' : '#bbb'} fill={filled ? '#2BB8FF' : 'none'} />
                             </button>
                           )
                         })}
@@ -136,7 +136,7 @@ const BlogPage = ({ scrolled }) => {
                           </div>
                           <div style={{margin:'0.5rem 0'}}>
                             {estrellas.map(n => (
-                              <Star key={n} size={18} color={(item.rating)>=n ? '#1E66D6' : '#ddd'} fill={(item.rating)>=n ? '#1E66D6' : 'none'} />
+                              <Star key={n} size={18} color={(item.rating)>=n ? '#2BB8FF' : '#ddd'} fill={(item.rating)>=n ? '#2BB8FF' : 'none'} />
                             ))}
                           </div>
                           <p style={{color:'#444'}}>{item.opinion}</p>

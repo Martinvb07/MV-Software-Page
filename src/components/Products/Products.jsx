@@ -10,7 +10,7 @@ const Products = ({ products }) => {
       <div className="section-container">
         <div className="section-header">
           <h2 className="section-title">Nuestros Productos</h2>
-          <p className="section-subtitle">Soluciones SaaS desarrolladas por MV Software para diferentes industrias</p>
+          <p className="section-subtitle">Soluciones SaaS desarrolladas por Velcore Systems para diferentes industrias</p>
         </div>
         <div className="products-grid">
           {products.map((product, index) => (
@@ -46,6 +46,10 @@ const Products = ({ products }) => {
                   onClick={() => {
                     if (product.id === 'mesoft') {
                       navigate('/productos/mesoft')
+                    } else if (product.id === 'agromanager') {
+                      navigate('/productos/agromanager')
+                    } else if (product.id === 'enviago') {
+                      navigate('/productos/enviago')
                     } else {
                       alert(`Conocer más sobre ${product.name}`)
                     }

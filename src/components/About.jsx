@@ -8,7 +8,7 @@ const About = () => {
       <div className="section-container">
         <div className="about-grid">
           <div className="about-content">
-            <h2 className="section-title">Sobre MV Software</h2>
+            <h2 className="section-title">Sobre Velcore Systems</h2>
             <p className="about-text">Somos una empresa colombiana especializada en el desarrollo de software a medida. Nos apasiona crear soluciones tecnológicas que realmente resuelven problemas y generan valor para nuestros clientes.</p>
             <p className="about-text">Nuestro enfoque se centra en entender profundamente las necesidades de cada negocio para diseñar y desarrollar sistemas que no solo cumplan con los requisitos técnicos, sino que además sean intuitivos, escalables y fáciles de mantener.</p>
             <div className="about-highlights">

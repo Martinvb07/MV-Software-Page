@@ -8,8 +8,8 @@ const Header = ({ scrolled, activeSection }) => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
         <Link className="logo" to="/">
-          <span className="logo-text">MV</span>
-          <span className="logo-subtitle">SOFTWARE</span>
+          <span className="logo-text">VELCORE</span>
+          <span className="logo-subtitle">SYSTEMS</span>
         </Link>
         <div className="nav-menu">
           <Link className={`nav-link ${activeSection === 'inicio' ? 'active' : ''}`} to="/">Inicio</Link>

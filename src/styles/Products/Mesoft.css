@@ -118,7 +118,7 @@
 }
 
 .mesoft-content::-webkit-scrollbar-thumb {
-  background: #1E66D6;
+  background: var(--primary-blue);
   border-radius: 4px;
 }
 
@@ -313,8 +313,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: #E8F1FD;
-  color: #1E66D6;
+  background: var(--light-blue);
+  color: var(--primary-blue);
   margin: 0 auto 0.75rem;
 }
 
@@ -662,21 +662,21 @@
 }
 
 .pricing-card:hover {
-  border-color: #1E66D6;
+  border-color: var(--primary-blue);
   transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(30, 102, 214, 0.15);
+  box-shadow: 0 25px 60px rgba(43, 184, 255, 0.15);
 }
 
 .pricing-card.recommended {
-  border-color: #1E66D6;
-  box-shadow: 0 20px 50px rgba(30, 102, 214, 0.2);
+  border-color: var(--primary-blue);
+  box-shadow: 0 20px 50px rgba(43, 184, 255, 0.2);
 }
 
 .badge-recommended {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background: linear-gradient(135deg, #1E66D6 0%, #154BA0 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
   color: white;
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
@@ -697,7 +697,7 @@
 .price .currency {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1E66D6;
+  color: var(--primary-blue);
 }
 
 .price .amount {
@@ -736,7 +736,7 @@
 }
 
 .features-list svg {
-  color: #1E66D6;
+  color: var(--primary-blue);
   flex-shrink: 0;
 }
 
@@ -747,7 +747,7 @@
 /* ==================== CTA ==================== */
 .mesoft-cta {
   padding: 6rem 3rem;
-  background: linear-gradient(135deg, #1E66D6 0%, #154BA0 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
   text-align: center;
   color: white;
 }
